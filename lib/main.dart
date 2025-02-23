@@ -42,42 +42,39 @@ class Myapp extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              Container(
-                color: Colors.white,
-                margin: EdgeInsets.fromLTRB(30, 50, 30, 0),
-                padding: EdgeInsets.all(10),
-                child: Row(
-                  children: [
-                    Icon(Icons.phone, color: Colors.black),
-                    SizedBox(width: 15),
-                    Text(
-                      "+63 961 329 5671",
-                      style: TextStyle(
-                        color: Colors.teal[900],
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'SourceCodePro',
-                      ),
-                    ),
-                  ],
+              SizedBox(
+                height: 10,
+                width: 150,
+                child: Divider(
+                  color: Colors.teal[100],
                 ),
               ),
-              Container(
-                color: Colors.white,
+              Card(
                 margin: EdgeInsets.fromLTRB(30, 20, 30, 0),
-                padding: EdgeInsets.all(10),
-                child: Row(
-                  children: [
-                    Icon(Icons.email),
-                    SizedBox(width: 15),
-                    Text(
-                      "vinceumali81@gmail.com",
-                      style: TextStyle(
-                        fontFamily: "SourceCodePro",
-                        color: Colors.teal[900],
-                        fontWeight: FontWeight.bold,
-                      ),
+                child: ListTile(
+                  leading: Icon(Icons.phone, color: Colors.teal),
+                  title: Text(
+                    "+63 961 329 5671",
+                    style: TextStyle(
+                      color: Colors.teal[900],
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'SourceCodePro',
                     ),
-                  ],
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.fromLTRB(30, 20, 30, 0),
+                child: ListTile(
+                  leading: Icon(Icons.email, color: Colors.teal),
+                  title: Text(
+                    "vinceumali81@gmail.com",
+                    style: TextStyle(
+                      fontFamily: "SourceCodePro",
+                      fontWeight: FontWeight.bold,
+                      color: Colors.teal[900],
+                    ),
+                  ),
                 ),
               ),
             ],
