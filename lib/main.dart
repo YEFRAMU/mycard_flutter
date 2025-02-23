@@ -16,51 +16,69 @@ class Myapp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           //SafeArea widget used for avoiding the status bar or like the notch of the phone
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                height: double.infinity,
-                width: 100.0,
-                color: Colors.red,
-                child: Text("Container 1"),
+              CircleAvatar(
+                radius: 50.0,
+                backgroundColor: Colors.white,
+                backgroundImage: AssetImage("images/photo_me.jpg"),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 100,
-                    width: 100,
-                    color: Colors.yellow,
-                    // child: Text("Container 2"),
-                    child: Row(
-                      children: [
-                        Container(
-                          height: 20,
-                          width: 20,
-                          color: Colors.red,
-                        ),
-                        Container(
-                          height: 20,
-                          width: 20,
-                          color: Colors.blue,
-                        )
-                      ],
+              Text(
+                "Vince Umali",
+                style: TextStyle(
+                  fontFamily: 'DMSerifText',
+                  fontSize: 50,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                "Flutter Developer",
+                style: TextStyle(
+                  fontFamily: 'SourceCodePro',
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              Container(
+                color: Colors.white,
+                margin: EdgeInsets.fromLTRB(30, 50, 30, 0),
+                padding: EdgeInsets.all(10),
+                child: Row(
+                  children: [
+                    Icon(Icons.phone, color: Colors.black),
+                    SizedBox(width: 15),
+                    Text(
+                      "+63 961 329 5671",
+                      style: TextStyle(
+                        color: Colors.teal[900],
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'SourceCodePro',
+                      ),
                     ),
-                  ),
-                  Container(
-                    height: 100,
-                    width: 100,
-                    color: Colors.green,
-                    child: Text("Container 3"),
-                  ),
-                ],
+                  ],
+                ),
               ),
               Container(
-                width: 100,
-                height: double.infinity,
-                color: Colors.blue,
-                child: Text("Container 4"),
+                color: Colors.white,
+                margin: EdgeInsets.fromLTRB(30, 20, 30, 0),
+                padding: EdgeInsets.all(10),
+                child: Row(
+                  children: [
+                    Icon(Icons.email),
+                    SizedBox(width: 15),
+                    Text(
+                      "vinceumali81@gmail.com",
+                      style: TextStyle(
+                        fontFamily: "SourceCodePro",
+                        color: Colors.teal[900],
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
